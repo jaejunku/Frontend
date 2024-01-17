@@ -1,11 +1,15 @@
 import { useState } from 'react';
-import './login.css';
+import './LoginForm.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function LoginForm() {
   const [userName, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+
   function handleLogin() {
     console.log("counting on you guys backend")
+    navigate('/main');
   }
 
 
